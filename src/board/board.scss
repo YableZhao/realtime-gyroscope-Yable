@@ -1,0 +1,48 @@
+@use "sass:math";
+
+$dim: 512px;
+$bdim: math.div($dim, 10);
+$bdim-l: math.div($dim, 2) + 1;
+
+.board.content-item, .board {
+    width: $dim;
+    height: $dim;
+    min-width: $dim;
+    min-height: $dim;
+
+    background-size: $bdim-l $bdim-l, $bdim-l $bdim-l,
+                     $bdim $bdim, $bdim $bdim;
+                     
+    background-position: -1 -1, -1 -1, 0 0, 0 0;
+
+    background-image:
+        linear-gradient(to right, white 1px, transparent 1px),
+        linear-gradient(to bottom, white 1px, transparent 1px),
+        linear-gradient(to right, grey 1px, transparent 1px),
+        linear-gradient(to bottom, grey 1px, transparent 1px);
+
+    border: 1px solid white;
+}
+
+.dot {    
+    border: solid orange;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.dot-container {
+    position: relative;
+    width: 0;
+    height: 0;
+    overflow: visible;
+}
+
+.dot-label {
+    position: absolute;
+    top: -20px;
+    width: 100px;
+    margin-left: -42px;
+    text-align: center;
+    color: black;
+}

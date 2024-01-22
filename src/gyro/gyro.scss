@@ -1,0 +1,14 @@
+.permission-button {
+  border-radius: 12px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.permission-button.default {
+  background-color: #ffd24d;
+}
+
+.permission-button.granted {
+  background-color: #668fac;
+}

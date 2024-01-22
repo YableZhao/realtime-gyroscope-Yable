@@ -1,0 +1,35 @@
+@use "sass:math";
+
+$dim: 512px;
+$bar-height: 20px;
+
+.bar {
+    position: relative;
+    width: $dim;
+    height: $bar-height;
+    min-width: $dim;
+    min-height: $bar-height;
+    background: navy;
+    border: 50px solid white;
+}
+
+$dot-size: 20px;
+
+.point-container {
+    position: absolute;
+    width: $dot-size;
+    height: $dot-size;
+    overflow: visible;
+    background-color: orange;
+    border: 3px solid orange;
+    border-radius: 50%;
+}
+
+.point-label {
+    position: absolute;
+    top: -20px;
+    width: 100px;
+    margin-left: -42px;
+    text-align: center;
+    color: black;
+}
