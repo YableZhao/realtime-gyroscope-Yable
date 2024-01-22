@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "allowSyntheticDefaultImports": true,
+      "noImplicitAny": true,
+      "module": "es6",
+      "target": "es5",
+      "allowJs": true,
+      "moduleResolution": "node",
+      "jsx": "react",
+      "baseUrl": "./",
+      "typeRoots": [
+        "./node_modules/@types",
+      ],
+      "paths": {
+        "@root/*": ["src/*"],
+      }
+    },
+    "files": ["src/client.tsx"],
+    "include": [
+      "./src/**/*"
+    ]
+  }
+  
